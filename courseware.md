@@ -298,8 +298,24 @@
   * Source control with Git
     * How do you keep track of a project with many developers working on small pieces of a larger whole?
     * How do you revert versions of code across many developers in sync?
-    * 
+    * You use a *version control system*
+    * Examples are Subversion, CVS, Mercurial, Git, etc etc
+      * GitHub is a public (or private!) code repository with version control
+        * Commit
+        * Push
+        * Checkout
+        * Clone
+        * Branch
+        * Commit
+----
   * Vagrant
+    * Creates and configures virtual environments
+    * Why?
+      * Developers like to develop locally - but distributing an entire VM is hard
+      * Everyone needs to have the *exact* same environment to code 
+    * Define base "box" and all configuration via a text file (Vagrantfile)
+    * Example Vagrantfile
+
   * Cloud Foundry
   * Markdown
 3. Docker 101 in 1 hour with hands on
