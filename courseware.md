@@ -252,24 +252,53 @@
 
 ---
 
-2. Deployment options - VMs, containers, PaaS, unikernel
+2. Deployment options - VMs, unikernel, containers, and PaaS
 
   * VMs - full implementation of an OS
     * maximum isolation (outside of physical)
     * least efficient resource utilization
     * More to manage than before
+    * Really made for pets
 
-  * Containers (Docker)
+  * Unikernel - just the basics
+    * absolute minimum install to support app
+    * Kernels are modularized
+    * Isolation of a VM, but much lower utilization
+    * Not as common and requires deeper knowledge to operate
+
+  * Containers (Docker) - app isolation in usermode
     * userspace and some kernel isolation
     * most effective resource utilization (only use resources of app)
+    * PORTABILITY AND REPEATABILITY
     * Management burden shifts to containers
       * Networking difficulties
       * Keeping track of cattle
 
-
+  * PaaS - who cares about all of the stuff?  Let's just code!
+    * No (or minimal) concern for infrastructure
+    * PaaS requires a different mindset
+      * Limited Frameworks
+      * Toolsets
+      * Networking
+      * Upload code and go
+---
 3. DevOp tools
   * Languages and Frameworks
+    * Compiled
+      * machine code is created for the specific platform
+      * Main advantage is speed / disadvantage is portability
+      * If the machine platform is correct - no dependencies (most of the time)
+      * C, C++, Golang
+    * Interpreted
+      * compiled at run time or via an intermediate representation
+      * Main advantage is portability / disadvantage is speed
+      * Require dependancies if no packaging engine is used (pip for example)
+      * Java, Python, Ruby, .NET
+---    
   * Source control with Git
+    * How do you keep track of a project with many developers working on small pieces of a larger whole?
+    * How do you revert versions of code across many developers in sync?
+    * 
   * Vagrant
   * Cloud Foundry
   * Markdown
@@ -277,6 +306,8 @@
   * Docker install
   * Docker basic commands
   * Docker management via Mesos, Kubernetes
+
+---
 
 ###Part 2 - hands on app deploy
 
