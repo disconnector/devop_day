@@ -6,6 +6,8 @@ apt-get -y upgrade
 
 apt-get -y install toilet figlet cowsay fortune fortunes-bofh-excuses
 
+rm -f /etc/update-motd.d/*
+
 cp 00-header 99-footer /etc/update-motd.d/
 
 cat EMC_CA.pem | sudo tee -a /etc/ssl/certs/ca-certificates.crt
