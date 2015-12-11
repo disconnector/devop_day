@@ -405,8 +405,9 @@
 ---
 # Deploying an app vi PWS/PCF
   * Be sure you've Git cloned the class repo to your laptop as in the class prep
-  * Download the PWS toolset 
+  * Download the PWS toolset
     * Go to https://console.run.pivotal.io/tools and download the correct version for your local OS
+    * Install it.  Duh
   * Connect to PWS
     * @ CLI - <cf login -a https://api.run.pivotal.io>  Enter username and password
     * Examine the output - you should be in the "EVP" org and "EMC" space.  If not please speak up.
