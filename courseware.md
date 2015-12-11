@@ -7,6 +7,24 @@
   2. Docker app deploy
   3. PWS app deploy
 
+* Class prep on your VM
+  * log into your VM via SSH -
+      * PuTTY - in the hostname or IP box type <emcse@{ip adress of assigned server}
+      * OSX - open a terminal windows and type ssh emcse@{ip address of assigned server} - - - ahhh the power of an actual UNIX under the hood makes me smile
+      * the password is emcse
+  * Flip over to root (bad idea in the real world - but hey this is class right?) <su root> password emcse
+  * Update your server.  If we don't do this we risk getting out of date packages from apt. If you've never used a package manager your in for a real treat her folks <apt-get update && apt-get upgrade>
+  * Install Git - more on this later <apt-get -y install git>
+  * Git (yes it's a pun) the course materials - <git clone https://github.com/disconnector/devop-day.git>
+  * When it finishes <ls> the directory you're in and voila! there are the course materials.  Use <ls> and <cd> to look around
+
+* Class prep on your laptop
+  * You do have a Github account right?
+  * Open up https://github.com/disconnector/ and check out the repos.  
+  * Click on the "devop-day" repo
+  * Click on the "Download ZIP" button and unzip the class materials somewhere convenient.
+  * Of course if you already know git then cowboy up
+
 ---
 
 ##Part 1 - DevOps in a nutshell
@@ -357,7 +375,7 @@
 ---    
   * Markdown
     * What this doc is written in :-)
-    * Quick and easy way to generate formatted docs for people who hate writing docs
+    * Quick and easy way to generate formatted docs for people who hate writing docs.  IT uses a text to html conversion process - write in text with MD, get webpages.
     * Check out the Chrome extension "Markdown Preview Plus"
 ---    
   * A good text editor
@@ -390,8 +408,9 @@
   * Download toolset
     * Go to https://console.run.pivotal.io/tools and download the correct version for your local OS
   * Connect to PWS
-    * @ CLI - cf login -a https://api.run.pivotal.io  Enter username and password
+    * @ CLI - <cf login -a https://api.run.pivotal.io>  Enter username and password
     * Examine the output - you should be in the "EVP" org and "EMC" space.  If not please speak up.
+    * type
   * Examine files
     * Open local code under cf in git download
       * hello-idiomatic.py - main code we are running on the back end.  Replace my name with yours . . . if you know Flask feel free to add variables and/or play
@@ -399,3 +418,12 @@
       * mainfest.yml - (YAML file - data oriented markup language) - settings for the "push".  Replace the ${random-word} with your last name and year of birth.  hello-python-barlow70 for example
       * requirements.txt - what are the required frameworks for the code
   * Run Code
+    * in CLI while in cf directory type <cf push>
+    * Watch your app magically appear
+    * Note the name of the app - when it finished deploying open a webbrowser and go to http://{name of app}.cfapps.io to see the results
+    * Profit!
+  * Clean up
+    * Open PWS console page (https://console.run.pivotal.io) and log in.
+    * Check out your running app!
+    * Click the far right arrow for details
+    * When done - stop your app and delete it
