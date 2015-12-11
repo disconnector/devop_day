@@ -399,16 +399,27 @@
       * we're making this easy ok?
       * Install python packaging tool <apt-get install python-pip>
         * Observe the dozens of dependancies that are installed . . . sheesh!
-      * Install framework <pip install flask>
+      * Install the Flask framework <pip install flask>
         * Even more dependancies - and every one has a version number <shiver>
     * Get code from github
       * You already have this right?
     * Examine and update code
       * cd to devop_day/local_code
+      * Notice this is very simple - just one Python script that calls one framework
+      * Open hello-python.py in a text editor and change the {myname="Rich Barlow"} line to be your name
+    * Run the code
+      * While in the directory that contains the "hello-python.py" code, type <python hello-python.py>
+      * You should see lines of code scroll by with the final line looking something like:
+        <Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)>
+        If not please let me know  . . .
+    * see it running
+      * open your web browswer and got to http://{ip address of VM}:5000
 
-
-    * run
-    * Why is this hard?
+    ## Why is this hard?
+    * Dependencies from hell
+    * Versioning
+    * What happens as the code AND the infrastructure get updated?
+    * How much time does it take to build a server?  Errors?  Ouch
 ---
   # Deploying an app via Docker
     * Docker pull container
