@@ -7,6 +7,9 @@
   2. Docker app deploy
   3. PWS app deploy
 
+
+##NOTE --> We will be installing nearly everything ourselves.  With limited bandwidth we may face delays for downloads . . . this is expected and OK.  It's more important for everyone to get an actual feel for what actually happens in devop daily ops.  This can only be done at the keyboard.
+
 * Class prep on your VM
   * log into your VM via SSH -
       * PuTTY - in the hostname or IP box type <emcse@{ip adress of assigned server}
@@ -383,6 +386,7 @@
 ---
 
 3. Docker 101 in 1 hour with hands on
+  * Why Docker?
   * Docker install
   * Docker basic commands
   * Docker management via Mesos, Kubernetes
@@ -412,7 +416,7 @@
       * You should see lines of code scroll by with the final line looking something like:
         <Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)>
         If not please let me know  . . .
-    * see it running
+    * See it running
       * open your web browswer and got to http://{ip address of VM}:5000
 
     ## Why is this hard?
