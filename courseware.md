@@ -404,8 +404,8 @@
   * Ok - this was easier but . . .
 ---
 # Deploying an app vi PWS/PCF
-  * Git clone the class repo to your laptop
-  * Download toolset
+  * Be sure you've Git cloned the class repo to your laptop as in the class prep
+  * Download the PWS toolset 
     * Go to https://console.run.pivotal.io/tools and download the correct version for your local OS
   * Connect to PWS
     * @ CLI - <cf login -a https://api.run.pivotal.io>  Enter username and password
