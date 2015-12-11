@@ -316,7 +316,7 @@
     # Frameworks
       * Frameworks allow
 ---    
-    #Source control with Git
+    # Source control with Git
       * How do you keep track of a project with many developers working on small pieces of a larger whole?
       * How do you revert versions of code across many developers in sync?
       * You use a *version control system*
@@ -389,42 +389,44 @@
 
 ---
 
-###Part 2 - hands on app deploy
+#Part 2 - hands on app deploy
 
-1.  Deploying an app the old school way
-  * Install dependencies
-  * Get code from github
-  * Update Code
-  * run
-  * Why is this hard?
-
-2.  Deploying an app via Docker
-  * Docker pull container
-  * execute
-  * Ok - this was easier but . . .
 ---
-# Deploying an app vi PWS/PCF
-  * Be sure you've Git cloned the class repo to your laptop as in the class prep
-  * Download the PWS toolset
-    * Go to https://console.run.pivotal.io/tools and download the correct version for your local OS
-    * Install it.  Duh
-  * Connect to PWS
-    * @ CLI - <cf login -a https://api.run.pivotal.io>  Enter username and password
-    * Examine the output - you should be in the "EVP" org and "EMC" space.  If not please speak up.
-    * type
-  * Examine files
-    * Open local code under cf in git download
-      * hello-idiomatic.py - main code we are running on the back end.  Replace my name with yours . . . if you know Flask feel free to add variables and/or play
-      * templates/index.html - rendered webpage that reads variables from code.  Remember code-behind pages in ASP.net?  HAHAHAHAHAAA
-      * mainfest.yml - (YAML file - data oriented markup language) - settings for the "push".  Replace the ${random-word} with your last name and year of birth.  hello-python-barlow70 for example
-      * requirements.txt - what are the required frameworks for the code
-  * Run Code
-    * in CLI while in cf directory type <cf push>
-    * Watch your app magically appear
-    * Note the name of the app - when it finished deploying open a webbrowser and go to http://{name of app}.cfapps.io to see the results
+
+  # Deploying an app the old school way
+    * Install dependencies
+    * Get code from github
+    * Update Code
+    * run
+    * Why is this hard?
+---
+  # Deploying an app via Docker
+    * Docker pull container
+    * execute
+    * Ok - this was easier but . . .
+---
+  # Deploying an app via PWS/PCF
+    * Be sure you've Git cloned the class repo to your laptop as in the class prep
+    * Download the PWS toolset
+      * Go to https://console.run.pivotal.io/tools and download the correct version for your local OS
+      * Install it.  Duh
+      * Connect to PWS
+      * @ CLI - <cf login -a https://api.run.pivotal.io>  Enter username and password
+      * Examine the output - you should be in the "EVP" org and "EMC" space.  If not please speak up.
+      * type <cf help> for a list of commands 
+    * Examine files
+      * Open local code under cf in git download
+        * hello-idiomatic.py - main code we are running on the back end.  Replace my name with yours . . . if you know Flask feel free to add variables and/or play
+        * templates/index.html - rendered webpage that reads variables from code.  Remember code-behind pages in ASP.net?  HAHAHAHAHAAA
+        * mainfest.yml - (YAML file - data oriented markup language) - settings for the "push".  Replace the ${random-word} with your last name and year of birth.  hello-python-barlow70 for example
+        * requirements.txt - what are the required frameworks for the code
+    * Run Code
+      * in CLI while in cf directory type <cf push>
+      * Watch your app magically appear
+      * Note the name of the app - when it finished deploying open a webbrowser and go to http://{name of app}.cfapps.io to see the results
     * Profit!
-  * Clean up
-    * Open PWS console page (https://console.run.pivotal.io) and log in.
-    * Check out your running app!
-    * Click the far right arrow for details
-    * When done - stop your app and delete it
+    * Clean up
+      * Open PWS console page (https://console.run.pivotal.io) and log in.
+      * Check out your running app!
+      * Click the far right arrow for details
+      * When done - stop your app and delete it
