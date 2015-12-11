@@ -384,9 +384,18 @@
   * Docker pull container
   * execute
   * Ok - this was easier but . . .
-
-3.  Deploying an app vi PWS
+---
+# Deploying an app vi PWS/PCF
+  * Git clone the class repo to your laptop
   * Download toolset
+    * Go to https://console.run.pivotal.io/tools and download the correct version for your local OS
   * Connect to PWS
+    * @ CLI - cf login -a https://api.run.pivotal.io  Enter username and password
+    * Examine the output - you should be in the "EVP" org and "EMC" space.  If not please speak up.
   * Examine files
+    * Open local code under cf in git download
+      * hello-idiomatic.py - main code we are running on the back end.  Replace my name with yours . . . if you know Flask feel free to add variables and/or play
+      * templates/index.html - rendered webpage that reads variables from code.  Remember code-behind pages in ASP.net?  HAHAHAHAHAAA
+      * mainfest.yml - (YAML file - data oriented markup language) - settings for the "push".  Replace the ${random-word} with your last name and year of birth.  hello-python-barlow70 for example
+      * requirements.txt - what are the required frameworks for the code
   * Run Code
