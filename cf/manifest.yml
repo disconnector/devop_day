@@ -1,7 +1,7 @@
 ---
 applications:
-- name: hello-python-idiomatic-${random-word}
-  memory: 128M
+- name: hello-python-${random-word}
+  memory: 64M
   buildpack: python_buildpack
   domain: cfapps.io
   command: python hello-idiomatic.py
