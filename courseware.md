@@ -389,6 +389,7 @@
   * Why Docker?
   * Docker install
   * Docker basic commands
+  * Have class download ubuntu:latest image to save time later
   * Docker management via Mesos, Kubernetes
 
 ---
