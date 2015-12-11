@@ -394,7 +394,13 @@
 ---
 
   # Deploying an app the old school way
+    * Make sure you're <su root>.  Otherwise add <sudo> to every command
     * Install dependencies
+      * we're making this easy ok?
+      * Install python packaging tool <apt-get install python-pip>
+        * Observe the dozens of dependancies that are installed . . . sheesh!
+      * Install framework <pip install flask>
+        * Even more dependancies - and every one has a version number <shiver> 
     * Get code from github
     * Update Code
     * run
@@ -413,7 +419,7 @@
       * Connect to PWS
       * @ CLI - <cf login -a https://api.run.pivotal.io>  Enter username and password
       * Examine the output - you should be in the "EVP" org and "EMC" space.  If not please speak up.
-      * type <cf help> for a list of commands 
+      * type <cf help> for a list of commands
     * Examine files
       * Open local code under cf in git download
         * hello-idiomatic.py - main code we are running on the back end.  Replace my name with yours . . . if you know Flask feel free to add variables and/or play
