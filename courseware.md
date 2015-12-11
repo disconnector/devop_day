@@ -394,15 +394,19 @@
 ---
 
   # Deploying an app the old school way
-    * Make sure you're <su root>.  Otherwise add <sudo> to every command
+    * This is all done on your Linux VM.  Make sure you're <su root>.  Otherwise add <sudo> to every command
     * Install dependencies
       * we're making this easy ok?
       * Install python packaging tool <apt-get install python-pip>
         * Observe the dozens of dependancies that are installed . . . sheesh!
       * Install framework <pip install flask>
-        * Even more dependancies - and every one has a version number <shiver> 
+        * Even more dependancies - and every one has a version number <shiver>
     * Get code from github
-    * Update Code
+      * You already have this right?
+    * Examine and update code
+      * cd to devop_day/local_code
+
+
     * run
     * Why is this hard?
 ---
