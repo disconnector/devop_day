@@ -4,11 +4,7 @@ apt-get update
 
 apt-get -y upgrade
 
-apt-get -y install toilet figlet cowsay fortune
-
-mkdir /home/ops/packages
-
-cd /home/ops/packages
+apt-get -y install toilet figlet cowsay fortune fortunes-bofh-excuses
 
 cp 00-header 99-footer /etc/update-motd.d/
 
