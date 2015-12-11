@@ -282,49 +282,88 @@
       * Networking
       * Upload code and go
 ---
-3. DevOp tools
-  * Languages and Frameworks
-    * Compiled
-      * machine code is created for the specific platform
-      * Main advantage is speed / disadvantage is portability
-      * If the machine platform is correct - no dependencies (most of the time)
-      * C, C++, Golang
-    * Interpreted
-      * compiled at run time or via an intermediate representation
-      * Main advantage is portability / disadvantage is speed
-      * Require dependancies if no packaging engine is used (pip for example)
-      * Java, Python, Ruby, .NET
+    # DevOp tools
+      Languages
+      * Compiled
+        * machine code is created for the specific platform
+        * Main advantage is speed / disadvantage is portability
+        * If the machine platform is correct - no dependencies (most of the time)
+        * C, C++, Golang
+      * Interpreted
+        * compiled at run time or via an intermediate representation
+        * Main advantage is portability / disadvantage is speed
+        * Require dependancies if no packaging engine is used (pip for example)
+        * Java, Python, Ruby, .NET
+
+    # Frameworks
+      * Frameworks allow
 ---    
-  * Source control with Git
-    * How do you keep track of a project with many developers working on small pieces of a larger whole?
-    * How do you revert versions of code across many developers in sync?
-    * You use a *version control system*
-    * Examples are Subversion, CVS, Mercurial, Git, etc etc
-      * GitHub is a public (or private!) code repository with version control
-        * Commit
-        * Push
-        * Checkout
-        * Clone
-        * Branch
-        * Commit
+    #Source control with Git
+      * How do you keep track of a project with many developers working on small pieces of a larger whole?
+      * How do you revert versions of code across many developers in sync?
+      * You use a *version control system*
+      * Examples are Subversion, CVS, Mercurial, Git, etc etc
+        *  GitHub is a public (or private!) code repository with version control
+          * Commit
+          * Push
+          * Checkout
+          * Clone
+          * Branch
+          * Commit
 ----
-  * Vagrant
-    * Creates and configures virtual environments
-    * Why?
-      * Developers like to develop locally - but distributing an entire VM is hard
-      * Everyone needs to have the *exact* same environment to code
-    * Define base "box" and all configuration via a text file (Vagrantfile)
-    * Example Vagrantfile
-    * Vagrant up
-    * Vagrant ssh
+    # Vagrant
+      * Creates and configures virtual environments
+      * Why?
+        * Developers like to develop locally - but distributing an entire VM is hard
+        * Everyone needs to have the *exact* same environment to code
+        * Define base "box" and all configuration via a text file (Vagrantfile)
+        * Example Vagrantfile
+        * Vagrant up
+        * Vagrant ssh
 ---
-  * Cloud Foundry
-    *
+    # Cloud Foundry - (with thanks to Matt Cowger and Jonas Rosland)
+      * PaaS is a category of cloud computing services that provides a platform allowing customers to develop, run and manage applications without the complexity of building and maintaining the infrastructure typically associated with developing and launching an app.
+
+
+    # CF 101
+
+    >what problems does it solve?
+
+    * managing operating systems sucks.
+    * managing runtimes sucks
+    * managing deployment of dependencies sucks
+    * managing application isolation sucks
+    * managing deployment tasks sucks
+
+    ## Process for deploying/scaling app on EC2 / EHC / etc
+
+    1. Deploy VM (the easy part - handled by IaaS...CMDB?)
+    2. Secure VM (or write some puppet)
+    2. Install runtime (with what?  rpm?  tarball?)
+    3. install dependencies (or write some scripts)
+    4. Install application (tarball? RPM? git?)
+    5. Start application (how?  job engine?  keep it running?)
+    6. Modify load balancer (how?)
+    7. Modify firewall (how?)
+    8. Add health checks (to where?  http? tcp? )
+
+    ## Process for deploying app on CF
+
+    1. `cf push app_name`
+
+    ## Process for scaling app on CF
+
+    1. `cf scale app_name -i instance_count`
 ---    
   * Markdown
     * What this doc is written in :-)
     * Quick and easy way to generate formatted docs for people who hate writing docs
+    * Check out the Chrome extension "Markdown Preview Plus"
 ---    
+  * A good text editor
+    * Atom or Sublime Text highly recommended
+---
+
 3. Docker 101 in 1 hour with hands on
   * Docker install
   * Docker basic commands

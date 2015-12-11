@@ -1,0 +1,4 @@
+#!/bin/bash
+
+exec /usr/games/fortune bofh-excuses | /usr/games/cowsay -n
+
