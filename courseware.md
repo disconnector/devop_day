@@ -312,12 +312,19 @@
     * Creates and configures virtual environments
     * Why?
       * Developers like to develop locally - but distributing an entire VM is hard
-      * Everyone needs to have the *exact* same environment to code 
+      * Everyone needs to have the *exact* same environment to code
     * Define base "box" and all configuration via a text file (Vagrantfile)
     * Example Vagrantfile
-
+    * Vagrant up
+    * Vagrant ssh
+---
   * Cloud Foundry
+    *
+---    
   * Markdown
+    * What this doc is written in :-)
+    * Quick and easy way to generate formatted docs for people who hate writing docs
+---    
 3. Docker 101 in 1 hour with hands on
   * Docker install
   * Docker basic commands
