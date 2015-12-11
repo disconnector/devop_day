@@ -427,9 +427,30 @@
     * How much time does it take to build a server?  Errors?  Ouch
 ---
   # Deploying an app via Docker
-    * Docker pull container
-    * execute
-    * Ok - this was easier but . . .
+    * Build container
+      * in directory with Dockerfile type <docker build -t simple_local_app .> <-- THE TRAILING PERIOD IS NEEDED!!
+      * This will build a local container that we can run later
+    * Run container
+      * run <docker images> to see if the container "simple_local_app" has been created
+      * Type <docker run -it -p 5000:5000 --name container_instance simple_local_app
+    * See it running!
+      * Open a web browser and go to http://{ip address of VM}:5000
+    * Clean up a bit for next part
+      * type <docker ps> to see running containers
+      * Type <docker kill {container name}> to free up port 5000
+
+  # Deploying a pre-built Docker container
+    * Pull down a simple container that I have out at Docker Hub
+      * type <docker pull disconnector/devop_day>
+    * Spin up a running container
+      * type <docker run -it -p 5000:5000 --name simple_remote_app disconnector/devop_day>
+      * Watch as it spins up . . .
+      * See it running!
+        * Open a web browser and go to http://{ip address of VM}:5000 . . . That's a nice eggplant color isn't it?
+
+    * Clean up
+      * type <docker ps> to see running containers
+      * Use <docker kill {container id}> to kill anything running
 ---
   # Deploying an app via PWS/PCF
     * Be sure you've Git cloned the class repo to your laptop as in the class prep
