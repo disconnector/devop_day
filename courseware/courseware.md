@@ -386,8 +386,10 @@
 ---
 
 3. Docker 101 in 1 hour with hands on
-  * Why Docker?
+  * Why Docker? - see PPTX
   * Docker install
+    * Log into your VM
+    *
   * Docker basic commands
   * Have class download ubuntu:latest image to save time later
   * Docker management via Mesos, Kubernetes
