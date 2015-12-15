@@ -453,6 +453,18 @@ Heavy weight methodologies work in some instances, but there are high costs, and
   * Why Docker? - **see PPTX**
   * Docker file system - AUFS
     * take several directories and present them as a single filesystem via union mount
+    * Uses Copy-on-write on a per file basis
+    * All *image* layers are read-only
+    * The top *container* layer is read-write
+
+---
+
+![inline](images/container_layers.jpg)
+
+---
+
+##Docker is space efficient
+![inline](images/saving-space.jpg)![inline](images/sharing-layers.jpg)
 
 ---
 
@@ -473,8 +485,9 @@ docker build - create container image
 docker run - run container
 docker attach - connect to running container
 docker search - search contents of a repository
-docker ps - see running containers (-l lists running and stopped)
+docker ps - see running containers (-a lists running and stopped)
 docker images - see local images
+docker history - see layers in image
 
 ```
 
@@ -542,6 +555,7 @@ ctrl-X to save
 #Create the container
 
 While in directory with Dockerfile
+
 ```bash
 docker build -t simple_container .
 ```
@@ -550,6 +564,14 @@ docker build -t simple_container .
 
 ```bash
 docker images
+```
+
+---
+
+##See layers in image
+
+```bash
+docker history simple_container
 ```
 
 ---
