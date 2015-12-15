@@ -451,9 +451,9 @@ Heavy weight methodologies work in some instances, but there are high costs, and
 
 ## Docker 101
   * Why Docker? - **see PPTX**
-  * Docker file system - AUFS
+  * Docker file system - AUFS, btrfs, or devicemapper
     * take several directories and present them as a single filesystem via union mount
-    * Uses Copy-on-write on a per file basis
+    * Uses Copy-on-write on a per file or per block basis
     * All *image* layers are read-only
     * The top *container* layer is read-write
 
