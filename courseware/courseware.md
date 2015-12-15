@@ -372,7 +372,7 @@ Heavy weight methodologies work in some instances, but there are high costs, and
   * Push, commit, checkout, clone, fork code . . . from anywhere in the world
   * Private repos available
 
-  Demo with Github
+  Demo with Github.com
 
 ----
 # Vagrant
@@ -381,18 +381,22 @@ Heavy weight methodologies work in some instances, but there are high costs, and
     * Developers like to develop locally - but distributing an entire VM is hard
     * Everyone needs to have the *exact* same environment to code
 
+---
+
 # Vagrant
   * Define base "box" and all configuration via a text file (Vagrantfile)
   * Example Vagrantfile
   * Vagrant up
   * Vagrant ssh
 
-    Vagrant demo
+    Vagrant demo - if time install locally (http://rigel.local:8000 after I start SimpleHTTPServer)
+
 ---
+
 # Cloud Foundry - (with thanks to Matt Cowger and Jonas Rosland)
   * PaaS is a category of cloud computing services that provides a platform allowing customers to develop, run and manage applications without the complexity of building and maintaining the infrastructure typically associated with developing and launching an app.
 
-  ---
+---
 
 # CF 101
 
@@ -445,31 +449,133 @@ Heavy weight methodologies work in some instances, but there are high costs, and
 
 ---
 
-3. Docker 101 in 1 hour with hands on
-  * Why Docker? - see PPTX
+## Docker 101
+  * Why Docker? - **see PPTX**
   * Docker file system - AUFS
     * take several directories and present them as a single filesystem via union mount
+
+---
+
   * Docker install
     * Log into your VM
     * <su root> . . . duhhhh
     * Type <apt-get install docker.io>.  Watch the magic baby!
-  * Docker basic commands
-    * Type <docker help> to get  list of commands
-    * Basic Docker commands:
-    docker pull - pull image from repository
-    docker build - create container image
-    docker run - run container
-    docker attach - connect to running container
-    docker search - search contents of a repository
 
-    The confusing thing (to me at least) about Docker is that you have to specify the command to run.  Otherwise a running container does nothing :-)
+---
 
-    Let's download a container:
+###Docker basic commands
+Type <docker help> to get  list of commands
 
-    ```bash
-    docker pull ubuntu
+```bash
 
-  * Have class download ubuntu:latest image to save time later
-  * Docker management via Mesos, Kubernetes
+docker pull - pull image from repository
+docker build - create container image
+docker run - run container
+docker attach - connect to running container
+docker search - search contents of a repository
+docker ps - see running containers (-l lists running and stopped)
+docker images - see local images
 
+```
+
+---
+
+##Let's search Docker Hub
+
+```bash
+  First su root (yep . . . lazy)
+  docker search ubuntu
+  docker search hashicorp
+  docker search tomcat
+  ```
+
+---
+
+##Pull an image
+
+
+```bash
+  docker pull ubuntu
+```
+
+This is a good time for a break :-)
+
+---
+
+##List local images
+
+```bash
+docker images
+```
+
+---
+
+##Build a container
+
+Dockerfile - a simple text file that defines a container
+
+Let's use a simple text editor to build a quick one in your VM
+
+```bash
+su root
+mkdir docker
+cd docker
+nano Dockerfile
+```
+
+---
+
+##Contents
+
+```
+FROM ubuntu
+MAINTAINER {yourself}
+RUN apt-get update
+RUN apt-get -y install python
+
+ctrl-X to save
+
+```
+
+---
+
+#Create the container
+
+While in directory with Dockerfile
+```bash
+docker build -t simple_container .
+```
+
+##See your new container
+
+```bash
+docker images
+```
+
+---
+
+##Run the container
+
+```bash
+docker run -it -p 8000:8000 -name running_container simple_container /bin/bash
+```
+
+```bash
+@container prompt
+ifconfig
+python -m SimpleHTTPServer
+```
+
+Check it out from your base system
+
+---
+##Other tools
+```
+Docker Swarm - native Docker clustering
+Kubernetes - Google's Docker clustering engine
+Apache Mesos - Docker container automation
+Flocker - COntainer orchestration
+EMC RexRay - Persistent container storage
+EMC - many extensions for our arrays
+```
 ---
