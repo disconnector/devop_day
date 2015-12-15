@@ -459,7 +459,7 @@ Heavy weight methodologies work in some instances, but there are high costs, and
 
 ---
 
-![inline](images/container_layers.jpg)
+![inline](images/container-layers.jpg)
 
 ---
 
