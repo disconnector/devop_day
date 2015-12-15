@@ -8,6 +8,13 @@ This presentation is written in Github Formatted Markdown.  For best results vie
 
 ---
 
+###Many thanks to Matt Cowger and Jonas Rosland for content that I have stolen shamelessly
+
+> Plagiarism is the highest form of compliment and the lowest form of larceny
+--Eric Hoffer
+
+---
+
 ##The big question - How do applications actually get from dev laptops to production?
 
 >DevOps (a clipped compound of "development" and "operations") is a culture, movement or practice that emphasizes the collaboration and communication of both software developers and other information-technology (IT) professionals while automating the process of software delivery and infrastructure changes. It aims at establishing a culture and environment where building, testing, and releasing software, can happen rapidly, frequently, and more reliably.
@@ -15,7 +22,10 @@ This presentation is written in Github Formatted Markdown.  For best results vie
 
 ---
 
->DevOps requires a new relationship between developers (content creators)  and operations (content maintainers)
+DevOps requires a new relationship between
+##developers (content creators)  
+and
+##operations (content maintainers)
 
 ---
 
@@ -50,12 +60,12 @@ This presentation is written in Github Formatted Markdown.  For best results vie
 ---
 #Why Agile?
 
-  * Too many projects not delivered
-  * Software taking too long to get to market
-  * High costs to make changes after delivery
-  * Having to “get it right” first time/up front
-  * Unhappy Customers
-  * Unhappy Developers
+* Too many projects not delivered
+* Software taking too long to get to market
+* High costs to make changes after delivery
+* Having to “get it right” first time/up front
+* Unhappy Customers
+* Unhappy Developers
 
 ---
 
@@ -66,7 +76,7 @@ Agile may not be viable after every iteration
 
 ---
 
-#Software Development Methodologies
+# Traditional Software Development Methodologies
   * "Code-fix” (or no process)
   * Structured, heavy weight methodologies a.k.a.
   “Plan Driven Methodologies” and “Waterfall”
@@ -99,7 +109,7 @@ Agile may not be viable after every iteration
 #Relevance
 ###Heavy weight methodologies are most successful when:
 
-   - Requirements are stable
+   - Requirements are stable (HAHAHAHAHAHAAA)
    - Technology is well known and mature
    - Everything happens as one would expect
    - We are not taking on anything new or unknown
@@ -169,12 +179,6 @@ Heavy weight methodologies work in some instances, but there are high costs, and
 
 ---
 
-#Agile Project Lifecycle
-## Timeboxed iterations
-  ![inline](images/timebox.png)
-
----
-
 # The Basics
   ![inline](images/waterfall-v-agile-about.gif)
 
@@ -186,13 +190,13 @@ Heavy weight methodologies work in some instances, but there are high costs, and
 
 ---
 
-#Iterative
+#Iterative - many cycles
 
   ![inline](images/iterative.png)
 
 ---
 
-#Incremental
+#Incremental - every stage better
 
   ![inline](images/incremental.png)
 
@@ -235,24 +239,32 @@ Heavy weight methodologies work in some instances, but there are high costs, and
 
 ---
 
-#Traditional apps versus microservices
+# [fit] TOOLS
 
 ---
 
-Traditional apps are built as one large program
-* Exchange, Oracle, SQL
-  * This makes updating difficult because of tight coupling
-  * Updates come slowly - one change requires unit testing entire app
-  * How do you scale one part of the app?
-  * How do you spread the work over many developers
-  * Soon hit limits of human mind capacity to understand
-
----
-Modern apps are built around *microservices*
+#Traditional apps
+##versus
+#microservices
 
 ---
 
-A microservice is a program that does one and only one thing well
+##Traditional apps are built as one large program
+
+* This makes updating difficult because of tight coupling
+* Updates come slowly - one change requires unit testing entire app
+* How do you scale one part of the app?
+* How do you spread the work over many developers
+* Soon hit limits of human mind capacity to understand
+
+---
+##Modern apps are built around *microservices*
+
+>Google deploys 2 billion microservices (containers) every week
+
+---
+
+##A microservice is a program that does one and only one thing well
 
   * Examples - NetFlix, Google, pretty much any modern web app
   * All parts are loosely coupled
@@ -318,21 +330,21 @@ A microservice is a program that does one and only one thing well
 
 ---
 
-      * Compiled
+#Compiled
 
-        * machine code is created for the specific platform
-        * Main advantage is speed / disadvantage is portability
-        * If the machine platform is correct - no dependencies (most of the time)
-        * C, C++, Golang
+  * machine code is created for the specific platform
+  * Main advantage is speed / disadvantage is portability
+  * If the machine platform is correct - no dependencies (most of the time)
+  * C, C++, Golang
 
 ---
 
-      * Interpreted
+#Interpreted
 
-        * compiled at run time or via an intermediate representation
-        * Main advantage is portability / disadvantage is speed
-        * Require dependancies if no packaging engine is used (pip for example)
-        * Java, Python, Ruby, .NET
+  * compiled at run time or via an intermediate representation
+  * Main advantage is portability / disadvantage is speed
+  * Require dependancies if no packaging engine is used (pip for example)
+  * Java, Python, Ruby, .NET
 
 ---
 
@@ -341,8 +353,9 @@ A microservice is a program that does one and only one thing well
 ---
 
 # Frameworks
-      * Frameworks allow developers to be lazy sods.
-      * Instead of writing rewriting an entire web stack in a Ruby project just call Rails
+  * Frameworks allow developers to be lazy sods.
+  * Instead of writing rewriting an entire web stack in a Ruby project just call Rails
+  * We will work with a framework later
 
 ---
 
@@ -351,10 +364,15 @@ A microservice is a program that does one and only one thing well
   * How do you revert versions of code across many developers in sync?
   * You use a *version control system*
   * Examples are Subversion, CVS, Mercurial, Git, etc etc
-    *  GitHub is a public (or private!) code repository with version control
-      * Commit, push, checkout, clone, fork
 
-      Demo with Github
+---
+
+##Github
+  *  GitHub is a public (or private!) code repository with version control
+  * Push, commit, checkout, clone, fork code . . . from anywhere in the world
+  * Private repos available
+
+  Demo with Github
 
 ----
 # Vagrant
