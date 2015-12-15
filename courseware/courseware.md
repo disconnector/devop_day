@@ -1,14 +1,53 @@
 
-##Part 1 - DevOps in a nutshell
+# [fit] DevOps in a nutshell
+
 
 ---
 
-#Why all of this DevOps stuff?  What changed?
-  * The big question - How do applications actually get from dev laptops to production?
-  * Agile development (with thanks to Matt and Jonas)
+This presentation is written in Github Formatted Markdown.  For best results view in Deskset or the Google Chrome Markdown Preview Plus (or any other MD rendering engine.  Be happy I didn't decide to do Reveal.js ;-)
 
 ---
 
+##The big question - How do applications actually get from dev laptops to production?
+
+>DevOps (a clipped compound of "development" and "operations") is a culture, movement or practice that emphasizes the collaboration and communication of both software developers and other information-technology (IT) professionals while automating the process of software delivery and infrastructure changes. It aims at establishing a culture and environment where building, testing, and releasing software, can happen rapidly, frequently, and more reliably.
+
+
+---
+
+>DevOps requires a new relationship between developers (content creators)  and operations (content maintainers)
+
+---
+
+##In the past this was not required
+  * Simpler apps
+  * Clearly defined opjectives
+  * Slow pace of change
+  * Infrequent updates
+
+---
+
+![inline fit](images/work_in_dev.png)
+
+---
+
+##What issues do we see?
+
+  * Too many projects not delivered
+  * Software taking too long to get to market
+  * High costs to make changes after delivery
+  * Having to “get it right” first time/up front
+  * Unhappy Customers
+  * Unhappy Developers
+
+---
+
+##New processes AND tools are being used to fight this problem
+* Agile / Lean development process
+* New deployment technologies
+* New operational software
+
+---
 #Why Agile?
 
   * Too many projects not delivered
@@ -50,8 +89,15 @@ Agile may not be viable after every iteration
 
 ---
 
+
+
+>No plan survives contact with the enemy . . . or the market
+-- Larry Page
+
+---
+
 #Relevance
-  ###Heavy weight methodologies are most successful when:
+###Heavy weight methodologies are most successful when:
 
    - Requirements are stable
    - Technology is well known and mature
@@ -66,9 +112,10 @@ Agile may not be viable after every iteration
 
 ---
 
-#Projects with these characteristics are few and far between
+##Projects with these characteristics are few and far between
 
-  Heavy weight methodologies work in some instances, but there are high costs, and the risk in using them in dynamic environments is high.
+Heavy weight methodologies work in some instances, but there are high costs, and the risk in using them in dynamic environments is high.
+
 
 ---
 
