@@ -37,4 +37,4 @@ NOTE --> We will be installing nearly everything ourselves.  With limited bandwi
   * Open up https://github.com/disconnector/ and check out the repos.
   * Click on the "devop-day" repo
   * Click on the "Download ZIP" button and unzip the class materials somewhere convenient.
-  * Of course if you already know git then cowboy up
+  * Of course if you already know git then cowboy up!
