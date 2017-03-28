@@ -5,7 +5,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 my_uuid = str(uuid.uuid1())
-RED = "#CC3300"
+RED = "#CC3301"
 COLOR = RED
 
 @app.route('/')
